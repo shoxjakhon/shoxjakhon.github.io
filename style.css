@@ -1,0 +1,177 @@
+* {
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+body {
+  background: content-box no-repeat
+    linear-gradient(
+      228deg,
+      rgba(218, 116, 34, 1) 0%,
+      rgba(227, 155, 97, 1) 24%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  background-size: contain;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.cardContainer {
+  max-width: 500px;
+  box-sizing: border-box;
+  background-color: rgba(87, 76, 67, 0.2);
+  border-radius: 5%;
+  color: azure;
+
+  padding-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+  margin-right: 80px;
+
+  transition: all ease-in-out 250ms;
+}
+
+.cardContainer:hover {
+  transform: translateY(-20px) rotateZ(0.05rad);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 35px -15px, rgba(0, 0, 0, 0.1) 0px 20px 20px -10px;
+}
+
+.cardContent {
+  padding: 0 40px;
+}
+
+.profileImg {
+  width: 100%;
+  opacity: 0.9;
+}
+.cardPhoto {
+  overflow: hidden;
+  border-top-right-radius: 5%;
+  border-top-left-radius: 5%;
+}
+a {
+  text-decoration: none;
+
+  color: black;
+  font-weight: 600;
+}
+
+.cardTitle {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.cardQuote {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 22px;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+.cardLink {
+  text-align: center;
+}
+.cardEmail {
+  text-align: center;
+}
+.cardStack {
+  text-align: center;
+  font-size: 22px;
+
+  margin: 24px 0 12px;
+}
+
+.techList {
+  text-align: center;
+  font-size: 18px;
+}
+
+span {
+  color: bisque;
+}
+
+.buttonsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button {
+  background-color: #a7a397;
+  padding: 10px 40px;
+  border-radius: 10px;
+  transition: transform ease-in-out 200ms;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(3px) translateX(8px);
+}
+
+.cardResumeTitle {
+  font-size: 60px;
+  font-weight: 600;
+  color: aliceblue;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 16px;
+
+  text-align: center;
+}
+
+.resumeButton {
+  max-width: fit-content;
+  font-size: 24px;
+
+  position: relative;
+
+  transition: all ease-in-out 200ms;
+}
+
+.resumeButton:hover {
+  transform: none;
+  padding-left: 60px;
+}
+
+.resumeButton::before {
+  content: "";
+
+  position: absolute;
+
+  left: 25px;
+
+  transition: all ease-in-out 250ms;
+}
+
+.resumeButton:hover::before {
+  content: ">";
+}
+
+.resumeDownloadLink {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .cardContainer {
+    margin-top: 50px;
+    margin-right: 0;
+  }
+}
